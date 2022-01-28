@@ -80,3 +80,45 @@ quiz = {
         "answer": "Mercury"
     }
 }
+
+
+def get_name():
+    name = input("Enter your name: ")
+
+    print("Welcome", name, "to The Brainy Maze!")
+
+
+def get_question():
+    score = 0
+
+    for question in quiz:
+        attempts = 3
+
+        while attempts > 0:
+            print(quiz[question]['question'])
+
+            answer = input("Enter Answer: ")
+
+            check = check_ans(question, answer, attempts, score)
+            if check:
+                score += 1
+                break
+            attempts -= 1
+
+
+def check_ans(question, answer, attempts, score):
+    if quiz[question]['answer'].lower() == answer.lower():
+        print(f"Correct Answer! \n Your score is {score + 1}!")
+        return True
+    else:
+        print(f"Wrong Answer :( \nYou have {attempts -1} left! \nTry again...")
+        return False
+
+
+def main():
+    name = get_name()
+    question = get_question()
+    check = check_ans()
+
+
+main()
