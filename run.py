@@ -1,32 +1,82 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
-def first_move():
-    print(
-        "Make your first move by using one of the keywords:\n"
-        "'up','right','down' or 'left'\n"
-    )
-    playing_str = input("Enter your first move here:\n")
-
-
-def main():
-    """
-    Run all program functions
-    """
-    move_one = first_move()
-
-
-print(
-    "Welcome to 'The MAZE'\n"
-    "\n"
-    "", "--", "", "--", "END", "--\n"
-    "|", " |", "  |", "  ", " ", "|\n"
-    "", "--", "", "--", "--\n"
-    "|", " |", "  ", "", " |", " ", "|\n"
-    "", "--", "", " ", "  ", "\n"
-    "|", " |", "  |", "  ", " ", "|\n"
-    "", "--", "", "X", "", "--", "--", "\n"
-    "\n"
-    "Take X to END by using the keywords.\n"
-)
-main()
+quiz = {
+    1: {
+        "question": "How many colors are in the LGBTQ rainbow flag?",
+        "answer": "6"
+    },
+    2: {
+        "question": "What is the biggest capital in the EU?",
+        "answer": "Berlin"
+    },
+    3: {
+        "question": "What is the real name of Superman?",
+        "answer": "Clark Kent"
+    },
+    4: {
+        "question": "What does “www” stand for in a website browser?",
+        "answer": "World Wide web"
+    },
+    5: {
+        "question": "How many languages are written from right to left?",
+        "answer": "12"
+    },
+    6: {
+        "question": "What type of animal is a Flemish giant?",
+        "answer": "Rabbit"
+    },
+    7: {
+        "question": "Which animal can be seen on the Porsche logo?",
+        "answer": "Horse"
+    },
+    8: {
+        "question": "Who was the 1st woman pilot to fly across the Atlantic?",
+        "answer": "Amelia Earhart"
+    },
+    9: {
+        "question": "What was the first soft drink in space?",
+        "answer": "Coca Cola"
+    },
+    10: {
+        "question": "What is the most consumed hot drink in the world?",
+        "answer": "Tea"
+    },
+    11: {
+        "question": "How many teeth does an adult human have?",
+        "answer": "32"
+    },
+    12: {
+        "question": "What sport is dubbed the 'king of sports'?",
+        "answer": "Soccer"
+    },
+    13: {
+        "question": "Who does the wolf dress up as,in little red riding hood?",
+        "answer": "Grandmother"
+    },
+    14: {
+        "question": "Who is the patron saint of Ireland?",
+        "answer": "St Patrick"
+    },
+    15: {
+        "question": "What color is a ruby?",
+        "answer": "Red"
+    },
+    16: {
+        "question": "In what type of matter are atoms most tightly packed?",
+        "answer": "Solids"
+    },
+    17: {
+        "question": "What is the loudest animal on Earth?",
+        "answer": "Sperm Whale"
+    },
+    18: {
+        "question": "The unicorn is the national animal of which country?",
+        "answer": "Scotland"
+    },
+    19: {
+        "question": "How many legs does a spider have?",
+        "answer": "8"
+    },
+    20: {
+        "question": "What is the nearest planet to the sun?",
+        "answer": "Mercury"
+    }
+}
