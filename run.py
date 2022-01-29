@@ -1,3 +1,6 @@
+import time
+
+
 quiz = {
     1: {
         "question": "How many colors are in the LGBTQ rainbow flag?",
@@ -12,7 +15,7 @@ quiz = {
         "answer": "Clark Kent"
     },
     4: {
-        "question": "What does “www” stand for in a website browser?",
+        "question": "What does 'www' stand for in a website browser?",
         "answer": "World Wide web"
     },
     5: {
@@ -86,12 +89,20 @@ def start_game():
     """
     Get the name of the player and welcome them and describe the game.
     """
-    name = input("Enter your name: \n")
+    validName = False
+    while not validName:
+        name = input("Hi there! Please enter your name: \n")
+        if len(name.strip()) > 0:
+            validName = True
+        else:
+            print("Please enter your name!\n")
 
     print("\nWelcome", name, "to The Brainy Maze!\n")
     print("Test your knowledge by answering 20 questions\n")
     print("If you failed to answer right, you have 3 attempts\n")
     print("Answer more to get a higher score!\n")
+    time.sleep(2)
+    get_question()
 
 
 def get_question():
@@ -115,8 +126,10 @@ def get_question():
                 break
             attempts -= 1
         else:
-            print("Congratulations!\n")
+            print("Game over!\n")
             print(f"Your score is: {score}!\n")
+            break
+    end_game()
 
 
 def check_ans(question, answer, attempts, score):
@@ -130,7 +143,7 @@ def check_ans(question, answer, attempts, score):
         print("\n")
         return True
     else:
-        print(f"Wrong! \nYou have {attempts -1} left! \nTry again...")
+        print(f"\nWrong! \nYou have {attempts -1} attempt(s) left!\n")
         return False
 
 
@@ -138,7 +151,18 @@ def end_game():
     """
     End the Game and give the finale score
     """
-    print("\nNew Player, Next!\n")
+    validChoice = False
+    while not validChoice:
+        choice = input("\nDo you want to play again? (Y/N)\n")
+        if choice.lower() == "y":
+            print("\n")
+            get_question()
+            validChoice = True
+        elif choice.lower() == "n":
+            print("Thanks for playing!")
+            validChoice = True
+        else:
+            print("That is not a valid option!\n")
 
 
 def main():
@@ -146,8 +170,6 @@ def main():
     Run all program functions
     """
     start_game()
-    get_question()
-    end_game()
 
 
 main()
