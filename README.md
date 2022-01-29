@@ -1,31 +1,57 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome jnehmeh87,
+>Brain Maze
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Brain Maze is a Python terminal game, which runs in the Code Institute mock terminal on Heroku.
 
-## Reminders
+The users can test their knowledge by answering 20 different questions.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+>How to play?
 
-## Creating the Heroku app
+The user have to answer 20 questions, with 3 attempts for each question.
+All correct answers will be additioned to give them a score over 20
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+>Features:
+- The user enter their name to give more of a user experience and his/her name will be used throughout the game.
+- Library of Q/A
+- The program check answers if correct
+- scoring
+- attemps
 
-1. `heroku/python`
-2. `heroku/nodejs`
+>Future features:
+- Create a puzzle with an X character that moves toward the finish line for user to win.
+- Have a score board displayed by the end of the game for each player to know their rank.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+>Data Model
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+?
 
-Connect your GitHub repository and deploy as normal.
+>Testing
 
-## Constraints
+I have manually tested this project by doing the following:
+- Passed the code through a PEP8 linter and confirmed there are no problems.
+- Tested in my local terminal and the Code Institute Keroku terminal.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+>Bugs
+>Solved Bugs
+- I had a problem breaking the code with the 3rd attempt, but I solved it...
 
------
-Happy coding!
+>Remaining Bugs
+- No bugs remaining
+
+>Validator Testing
+- PEP8
+    - No errors were returned from PEP8online.com
+
+>Deployment
+
+This project was deployed using Code Institute's mock terminal for Heroku.
+- Steps for deployment:
+    - Fork or clone this repository
+    - Create a new Heroku app
+    - Set the buildbacks to Python and NodeJS in that order
+    - Link the Heroku app to the repository
+    - Click on Deploy
+
+>Credits
+- Code Institute for the deployment terminal
