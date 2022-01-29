@@ -118,7 +118,7 @@ def get_question():
         while attempts > 0:
             print(quiz[question]['question'])
 
-            answer = input("Enter Answer: ")
+            answer = input("Enter Answer: \n")
 
             check = check_ans(question, answer, attempts, score)
             if check:
