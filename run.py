@@ -82,13 +82,23 @@ quiz = {
 }
 
 
-def get_name():
-    name = input("Enter your name: ")
+def start_game():
+    """
+    Get the name of the player and welcome them and describe the game.
+    """
+    name = input("Enter your name: \n")
 
-    print("Welcome", name, "to The Brainy Maze!")
+    print("\nWelcome", name, "to The Brainy Maze!\n")
+    print("Test your knowledge by answering 20 questions\n")
+    print("If you failed to answer right, you have 3 attempts\n")
+    print("Answer more to get a higher score!\n")
 
 
 def get_question():
+    """
+    Get the questions from the quiz dictionary and set the score to 0
+    also create input for answer. Add score or remove attempts function
+    """
     score = 0
 
     for question in quiz:
@@ -104,21 +114,40 @@ def get_question():
                 score += 1
                 break
             attempts -= 1
+        else:
+            print("Congratulations!\n")
+            print(f"Your score is: {score}!\n")
 
 
 def check_ans(question, answer, attempts, score):
+    """
+    Get the answer from quiz dictionary and compare it with the user input
+    Add one point to the score and give 2 attempts
+    """
     if quiz[question]['answer'].lower() == answer.lower():
-        print(f"Correct Answer! \n Your score is {score + 1}!")
+        print(f"\nCorrect Answer! \nYour score is {score + 1}!\n")
+        print("Great Job!\n")
+        print("\n")
         return True
     else:
-        print(f"Wrong Answer :( \nYou have {attempts -1} left! \nTry again...")
+        print(f"Wrong! \nYou have {attempts -1} left! \nTry again...")
         return False
 
 
+def end_game():
+    """
+    End the Game and give the finale score
+    """
+    print("\nNew Player, Next!\n")
+
+
 def main():
-    name = get_name()
-    question = get_question()
-    check = check_ans()
+    """
+    Run all program functions
+    """
+    start_game()
+    get_question()
+    end_game()
 
 
 main()
